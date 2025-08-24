@@ -197,6 +197,7 @@ body {
 /* Interactive Birthday Cards Section - Mobile First */
 .cards-section {
   margin-top: 3rem;
+  margin-bottom: 8rem;
   padding: 1.5rem 1rem;
   text-align: center;
   position: relative;
