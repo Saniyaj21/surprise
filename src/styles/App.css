@@ -290,6 +290,40 @@ body {
   margin-right: auto;
   line-height: 1.6;
   padding: 0 0.5rem;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.birthday-message:hover {
+  transform: scale(1.02);
+}
+
+/* Click Wave Effect */
+.click-wave {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: clickWave 1s ease-out forwards;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes clickWave {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+    border-width: 2px;
+  }
+  100% {
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+    border-width: 1px;
+  }
 }
 
 /* Music Controls */

@@ -4,6 +4,7 @@ import './styles/App.css'
 const App = () => {
   const [isMusicPlaying, setIsMusicPlaying] = useState(false);
   const [currentAudio, setCurrentAudio] = useState(null);
+  const [clickWaves, setClickWaves] = useState([]);
 
   // Array of music files - add more as needed
   const musicFiles = [
@@ -66,6 +67,26 @@ const App = () => {
     } else {
       playRandomMusic();
     }
+  };
+
+  const handleMessageClick = (event) => {
+    const rect = event.currentTarget.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    
+    const newWave = {
+      id: Date.now(),
+      x: x,
+      y: y,
+      timestamp: Date.now()
+    };
+    
+    setClickWaves(prev => [...prev, newWave]);
+    
+    // Remove wave after animation completes
+    setTimeout(() => {
+      setClickWaves(prev => prev.filter(wave => wave.id !== newWave.id));
+    }, 1000);
   };
 
   useEffect(() => {
@@ -257,10 +278,22 @@ const App = () => {
           </div>
         </h1>
 
-        <p className="birthday-message">
+        <p className="birthday-message" onClick={handleMessageClick}>
           May you be gifted with life's biggest joys and never-ending bliss.
           After all, you yourself are a gift to earth, so you deserve the best!
         </p>
+        
+        {/* Click Wave Effects */}
+        {clickWaves.map(wave => (
+          <div
+            key={wave.id}
+            className="click-wave"
+            style={{
+              left: wave.x,
+              top: wave.y
+            }}
+          />
+        ))}
       </div>
     </div>
   )
