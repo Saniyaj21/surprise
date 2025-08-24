@@ -1,0 +1,481 @@
+/* Birthday Surprise App - Mobile First Design */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&display=swap');
+
+:root {
+  --primary-color: #6366f1;
+  --secondary-color: #8b5cf6;
+  --accent-color: #f59e0b;
+  --text-color: #1f2937;
+  --background-color: #ffffff;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  --border-radius: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Fredoka One', cursive, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--background-color);
+  padding: 1rem;
+  position: relative;
+  overflow: visible;
+}
+
+/* Particles.js Container */
+.particles-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Main Content Container - Mobile First */
+.birthday-container {
+  padding: 2rem 1.5rem;
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+/* Birthday Title - Mobile First */
+.birthday-title {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  line-height: 1.2;
+}
+
+.title-line {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.title-line:last-child {
+  margin-bottom: 0;
+}
+
+.birthday-title span {
+  display: inline-block;
+  animation: titleFloat 3s ease-in-out infinite;
+}
+
+.birthday-title span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.birthday-title span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.birthday-title span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.birthday-title span:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+.birthday-title span:nth-child(6) {
+  animation-delay: 1s;
+}
+
+.birthday-title span:nth-child(7) {
+  animation-delay: 1.2s;
+}
+
+.birthday-title span:nth-child(8) {
+  animation-delay: 1.4s;
+}
+
+.birthday-title span:nth-child(9) {
+  animation-delay: 1.6s;
+}
+
+.birthday-title span:nth-child(10) {
+  animation-delay: 1.8s;
+}
+
+.birthday-title span:nth-child(11) {
+  animation-delay: 2s;
+}
+
+.birthday-title span:nth-child(12) {
+  animation-delay: 2.2s;
+}
+
+.birthday-title span:nth-child(13) {
+  animation-delay: 2.4s;
+}
+
+.birthday-title span:nth-child(14) {
+  animation-delay: 2.6s;
+}
+
+.birthday-title span:nth-child(15) {
+  animation-delay: 2.8s;
+}
+
+.birthday-title span:nth-child(16) {
+  animation-delay: 3s;
+}
+
+.birthday-title span:nth-child(17) {
+  animation-delay: 3.2s;
+}
+
+.birthday-title span:nth-child(18) {
+  animation-delay: 3.4s;
+}
+
+.birthday-title span:nth-child(19) {
+  animation-delay: 3.6s;
+}
+
+.birthday-title span:nth-child(20) {
+  animation-delay: 3.8s;
+}
+
+.birthday-title span:nth-child(21) {
+  animation-delay: 4s;
+}
+
+.birthday-title span:nth-child(22) {
+  animation-delay: 4.2s;
+}
+
+.birthday-title span:nth-child(23) {
+  animation-delay: 4.4s;
+}
+
+.birthday-title span:nth-child(24) {
+  animation-delay: 4.6s;
+}
+
+.birthday-title span:nth-child(25) {
+  animation-delay: 4.8s;
+}
+
+.birthday-title span:nth-child(26) {
+  animation-delay: 5s;
+}
+
+.birthday-title span:nth-child(27) {
+  animation-delay: 5.2s;
+}
+
+.birthday-title span:nth-child(28) {
+  animation-delay: 5.4s;
+}
+
+.birthday-title span:nth-child(29) {
+  animation-delay: 5.6s;
+}
+
+.birthday-title span:nth-child(30) {
+  animation-delay: 5.8s;
+}
+
+.birthday-title span:nth-child(31) {
+  animation-delay: 6s;
+}
+
+.birthday-title span:nth-child(32) {
+  animation-delay: 6.2s;
+}
+
+.birthday-title span:nth-child(33) {
+  animation-delay: 6.4s;
+}
+
+.birthday-title span:nth-child(34) {
+  animation-delay: 6.6s;
+}
+
+.birthday-title span:nth-child(35) {
+  animation-delay: 6.8s;
+}
+
+.birthday-title span:nth-child(36) {
+  animation-delay: 7s;
+}
+
+.birthday-title span:nth-child(37) {
+  animation-delay: 7.2s;
+}
+
+.birthday-title span:nth-child(38) {
+  animation-delay: 7.4s;
+}
+
+.birthday-title span:nth-child(39) {
+  animation-delay: 7.6s;
+}
+
+.birthday-title span:nth-child(40) {
+  animation-delay: 7.8s;
+}
+
+.birthday-title span:nth-child(41) {
+  animation-delay: 8s;
+}
+
+.birthday-title span:nth-child(42) {
+  animation-delay: 8.2s;
+}
+
+.birthday-title span:nth-child(43) {
+  animation-delay: 8.4s;
+}
+
+.birthday-title span:nth-child(44) {
+  animation-delay: 8.6s;
+}
+
+.birthday-title span:nth-child(45) {
+  animation-delay: 8.8s;
+}
+
+.birthday-title span:nth-child(46) {
+  animation-delay: 9s;
+}
+
+.birthday-title span:nth-child(47) {
+  animation-delay: 9.2s;
+}
+
+.birthday-title span:nth-child(48) {
+  animation-delay: 9.4s;
+}
+
+.birthday-title span:nth-child(49) {
+  animation-delay: 9.6s;
+}
+
+.birthday-title span:nth-child(50) {
+  animation-delay: 9.8s;
+}
+
+/* Birthday Message - Mobile First */
+.birthday-message {
+  font-size: 1rem;
+  color: #4b5563;
+  margin-bottom: 2rem;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  padding: 0 0.5rem;
+}
+
+/* Music Controls */
+.music-controls {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse; /* Reverse order so wave line appears first (left) */
+}
+
+.music-btn {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.music-btn:hover {
+  transform: scale(1.1);
+  background: var(--primary-color);
+  color: white;
+}
+
+.music-btn.playing {
+  background: var(--primary-color);
+  color: white;
+  animation: pulse 2s infinite;
+}
+
+/* Music Wave Line */
+.music-wave-line {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-left: 15px; /* Changed from margin-right to margin-left */
+  animation: slideIn 0.5s ease-out;
+}
+
+.wave-segment {
+  width: 3px;
+  height: 20px;
+  background: var(--primary-color);
+  border-radius: 2px;
+  animation: wave 1.2s ease-in-out infinite;
+}
+
+.wave-segment:nth-child(1) { animation-delay: 0s; }
+.wave-segment:nth-child(2) { animation-delay: 0.1s; }
+.wave-segment:nth-child(3) { animation-delay: 0.2s; }
+.wave-segment:nth-child(4) { animation-delay: 0.3s; }
+.wave-segment:nth-child(5) { animation-delay: 0.4s; }
+.wave-segment:nth-child(6) { animation-delay: 0.5s; }
+.wave-segment:nth-child(7) { animation-delay: 0.6s; }
+.wave-segment:nth-child(8) { animation-delay: 0.7s; }
+.wave-segment:nth-child(9) { animation-delay: 0.8s; }
+.wave-segment:nth-child(10) { animation-delay: 0.9s; }
+.wave-segment:nth-child(11) { animation-delay: 1s; }
+.wave-segment:nth-child(12) { animation-delay: 1.1s; }
+.wave-segment:nth-child(13) { animation-delay: 1.2s; }
+.wave-segment:nth-child(14) { animation-delay: 1.3s; }
+.wave-segment:nth-child(15) { animation-delay: 1.4s; }
+.wave-segment:nth-child(16) { animation-delay: 1.5s; }
+.wave-segment:nth-child(17) { animation-delay: 1.6s; }
+.wave-segment:nth-child(18) { animation-delay: 1.7s; }
+.wave-segment:nth-child(19) { animation-delay: 1.8s; }
+.wave-segment:nth-child(20) { animation-delay: 1.9s; }
+.wave-segment:nth-child(21) { animation-delay: 2s; }
+.wave-segment:nth-child(22) { animation-delay: 2.1s; }
+.wave-segment:nth-child(23) { animation-delay: 2.2s; }
+.wave-segment:nth-child(24) { animation-delay: 2.3s; }
+.wave-segment:nth-child(25) { animation-delay: 2.4s; }
+.wave-segment:nth-child(26) { animation-delay: 2.5s; }
+.wave-segment:nth-child(27) { animation-delay: 2.6s; }
+.wave-segment:nth-child(28) { animation-delay: 2.7s; }
+.wave-segment:nth-child(29) { animation-delay: 2.8s; }
+.wave-segment:nth-child(30) { animation-delay: 2.9s; }
+.wave-segment:nth-child(31) { animation-delay: 3s; }
+.wave-segment:nth-child(32) { animation-delay: 3.1s; }
+
+/* Animations */
+@keyframes titleFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes wave {
+  0%, 50%, 100% {
+    height: 20px;
+  }
+  25% {
+    height: 40px;
+  }
+  75% {
+    height: 10px;
+  }
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+  .app {
+    padding: 2rem;
+  }
+  
+  .birthday-container {
+    padding: 3rem 2.5rem;
+    max-width: 600px;
+  }
+  
+  .birthday-title {
+    font-size: 2.5rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 2rem;
+  }
+  
+  .birthday-message {
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+    max-width: 500px;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  .birthday-container {
+    padding: 4rem 3rem;
+  }
+  
+  .birthday-title {
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+  }
+  
+  .birthday-message {
+    font-size: 1.25rem;
+    margin-bottom: 3rem;
+  }
+}
+
+/* Large Desktop Styles */
+@media (min-width: 1440px) {
+  .birthday-container {
+    padding: 5rem 4rem;
+    max-width: 700px;
+  }
+  
+  .birthday-title {
+    font-size: 4rem;
+  }
+  
+  .birthday-message {
+    font-size: 1.375rem;
+  }
+}
