@@ -1,10 +1,22 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import './styles/App.css'
+
+// Register ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
   const [isMusicPlaying, setIsMusicPlaying] = useState(false);
   const [currentAudio, setCurrentAudio] = useState(null);
   const [clickWaves, setClickWaves] = useState([]);
+  const [currentCard, setCurrentCard] = useState(0);
+  
+  // Refs for scroll animations
+  const cardsSectionRef = useRef(null);
+  const cardsTitleRef = useRef(null);
+  const cardCarouselRef = useRef(null);
+  const cardsHintRef = useRef(null);
 
   // Array of music files - add more as needed
   const musicFiles = [
@@ -13,6 +25,34 @@ const App = () => {
     '/music3.m4a',
     '/music4.m4a',
     '/music5.m4a'
+  ];
+
+  // Birthday cards with reasons why she is special
+  const birthdayCards = [
+    {
+      message: "Your smile lights up every room you enter and brings joy to everyone around you."
+    },
+    {
+      message: "You have the most caring heart - always putting others before yourself and making everyone feel loved."
+    },
+    {
+      message: "Your strength and determination inspire everyone who knows you. You never give up on your dreams."
+    },
+    {
+      message: "You're incredibly intelligent and creative, always coming up with amazing ideas that surprise everyone."
+    },
+    {
+      message: "Your sense of humor is unmatched - you can make anyone laugh even on their worst days."
+    },
+    {
+      message: "You're the most loyal friend anyone could ask for, always there when someone needs support."
+    },
+    {
+      message: "Your kindness knows no bounds. You see the good in everyone and help them see it too."
+    },
+    {
+      message: "You're absolutely beautiful inside and out, with a spirit that shines brighter than any star."
+    }
   ];
 
   const playRandomMusic = () => {
@@ -199,6 +239,47 @@ const App = () => {
       };
       document.head.appendChild(script);
     }
+
+    // Scroll Trigger Animations
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: cardsSectionRef.current,
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none reverse"
+      }
+    });
+
+    // Initial state - hide elements
+    gsap.set([cardsTitleRef.current, cardCarouselRef.current, cardsHintRef.current], {
+      opacity: 0,
+      y: 50
+    });
+
+    // Animate elements in sequence
+    tl.to(cardsTitleRef.current, {
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      ease: "power2.out"
+    })
+    .to(cardCarouselRef.current, {
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      ease: "power2.out"
+    }, "-=0.4")
+    .to(cardsHintRef.current, {
+      opacity: 1,
+      y: 0,
+      duration: 0.6,
+      ease: "power2.out"
+    }, "-=0.6");
+
+    // Cleanup function
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
   }, []);
 
   return (
@@ -294,6 +375,59 @@ const App = () => {
             }}
           />
         ))}
+      </div>
+
+      {/* Interactive Birthday Cards Section */}
+      <div className="cards-section" ref={cardsSectionRef}>
+        <h2 className="cards-title" ref={cardsTitleRef}>Why You're Amazing</h2>
+        
+        <div className="card-carousel" ref={cardCarouselRef}>
+          <button 
+            className="card-nav-btn prev-btn" 
+            onClick={() => setCurrentCard((prev) => (prev - 1 + birthdayCards.length) % birthdayCards.length)}
+            aria-label="Previous card"
+          >
+            ‹
+          </button>
+          
+          <div className="card-container">
+            {birthdayCards.map((card, index) => (
+              <div
+                key={index}
+                className={`birthday-card ${index === currentCard ? 'active' : ''}`}
+                onClick={() => setCurrentCard(index)}
+              >
+                <div className="card-content">
+                  <div className="card-icon">🎉</div>
+                  <p className="card-message">"{card.message}"</p>
+                </div>
+                <div className="card-footer">
+                  <span className="card-number">{index + 1} / {birthdayCards.length}</span>
+                  <div className="card-dots">
+                    {birthdayCards.map((_, dotIndex) => (
+                      <span 
+                        key={dotIndex} 
+                        className={`dot ${dotIndex === index ? 'active' : ''}`}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setCurrentCard(dotIndex);
+                        }}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <button 
+            className="card-nav-btn next-btn" 
+            onClick={() => setCurrentCard((prev) => (prev + 1) % birthdayCards.length)}
+            aria-label="Next card"
+          >
+            ›
+          </button>
+        </div>
       </div>
     </div>
   )

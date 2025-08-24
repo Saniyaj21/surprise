@@ -25,17 +25,20 @@ body {
   color: var(--text-color);
   line-height: 1.6;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .app {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   background: var(--background-color);
-  padding: 1rem;
+  padding: 0;
   position: relative;
-  overflow: visible;
+  overflow: hidden;
 }
 
 /* Particles.js Container */
@@ -51,28 +54,34 @@ body {
 
 /* Main Content Container - Mobile First */
 .birthday-container {
-  padding: 2rem 1.5rem;
+  padding: 1.5rem 1rem;
   text-align: center;
   width: 100%;
   max-width: 100%;
   position: relative;
   z-index: 2;
+  margin-top: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Birthday Title - Mobile First */
 .birthday-title {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 400;
   color: var(--primary-color);
   margin-bottom: 1.5rem;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   line-height: 1.2;
 }
 
 .title-line {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
 }
 
 .title-line:last-child {
@@ -84,205 +93,59 @@ body {
   animation: titleFloat 3s ease-in-out infinite;
 }
 
-.birthday-title span:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.birthday-title span:nth-child(3) {
-  animation-delay: 0.4s;
-}
-
-.birthday-title span:nth-child(4) {
-  animation-delay: 0.6s;
-}
-
-.birthday-title span:nth-child(5) {
-  animation-delay: 0.8s;
-}
-
-.birthday-title span:nth-child(6) {
-  animation-delay: 1s;
-}
-
-.birthday-title span:nth-child(7) {
-  animation-delay: 1.2s;
-}
-
-.birthday-title span:nth-child(8) {
-  animation-delay: 1.4s;
-}
-
-.birthday-title span:nth-child(9) {
-  animation-delay: 1.6s;
-}
-
-.birthday-title span:nth-child(10) {
-  animation-delay: 1.8s;
-}
-
-.birthday-title span:nth-child(11) {
-  animation-delay: 2s;
-}
-
-.birthday-title span:nth-child(12) {
-  animation-delay: 2.2s;
-}
-
-.birthday-title span:nth-child(13) {
-  animation-delay: 2.4s;
-}
-
-.birthday-title span:nth-child(14) {
-  animation-delay: 2.6s;
-}
-
-.birthday-title span:nth-child(15) {
-  animation-delay: 2.8s;
-}
-
-.birthday-title span:nth-child(16) {
-  animation-delay: 3s;
-}
-
-.birthday-title span:nth-child(17) {
-  animation-delay: 3.2s;
-}
-
-.birthday-title span:nth-child(18) {
-  animation-delay: 3.4s;
-}
-
-.birthday-title span:nth-child(19) {
-  animation-delay: 3.6s;
-}
-
-.birthday-title span:nth-child(20) {
-  animation-delay: 3.8s;
-}
-
-.birthday-title span:nth-child(21) {
-  animation-delay: 4s;
-}
-
-.birthday-title span:nth-child(22) {
-  animation-delay: 4.2s;
-}
-
-.birthday-title span:nth-child(23) {
-  animation-delay: 4.4s;
-}
-
-.birthday-title span:nth-child(24) {
-  animation-delay: 4.6s;
-}
-
-.birthday-title span:nth-child(25) {
-  animation-delay: 4.8s;
-}
-
-.birthday-title span:nth-child(26) {
-  animation-delay: 5s;
-}
-
-.birthday-title span:nth-child(27) {
-  animation-delay: 5.2s;
-}
-
-.birthday-title span:nth-child(28) {
-  animation-delay: 5.4s;
-}
-
-.birthday-title span:nth-child(29) {
-  animation-delay: 5.6s;
-}
-
-.birthday-title span:nth-child(30) {
-  animation-delay: 5.8s;
-}
-
-.birthday-title span:nth-child(31) {
-  animation-delay: 6s;
-}
-
-.birthday-title span:nth-child(32) {
-  animation-delay: 6.2s;
-}
-
-.birthday-title span:nth-child(33) {
-  animation-delay: 6.4s;
-}
-
-.birthday-title span:nth-child(34) {
-  animation-delay: 6.6s;
-}
-
-.birthday-title span:nth-child(35) {
-  animation-delay: 6.8s;
-}
-
-.birthday-title span:nth-child(36) {
-  animation-delay: 7s;
-}
-
-.birthday-title span:nth-child(37) {
-  animation-delay: 7.2s;
-}
-
-.birthday-title span:nth-child(38) {
-  animation-delay: 7.4s;
-}
-
-.birthday-title span:nth-child(39) {
-  animation-delay: 7.6s;
-}
-
-.birthday-title span:nth-child(40) {
-  animation-delay: 7.8s;
-}
-
-.birthday-title span:nth-child(41) {
-  animation-delay: 8s;
-}
-
-.birthday-title span:nth-child(42) {
-  animation-delay: 8.2s;
-}
-
-.birthday-title span:nth-child(43) {
-  animation-delay: 8.4s;
-}
-
-.birthday-title span:nth-child(44) {
-  animation-delay: 8.6s;
-}
-
-.birthday-title span:nth-child(45) {
-  animation-delay: 8.8s;
-}
-
-.birthday-title span:nth-child(46) {
-  animation-delay: 9s;
-}
-
-.birthday-title span:nth-child(47) {
-  animation-delay: 9.2s;
-}
-
-.birthday-title span:nth-child(48) {
-  animation-delay: 9.4s;
-}
-
-.birthday-title span:nth-child(49) {
-  animation-delay: 9.6s;
-}
-
-.birthday-title span:nth-child(50) {
-  animation-delay: 9.8s;
-}
+.birthday-title span:nth-child(2) { animation-delay: 0.2s; }
+.birthday-title span:nth-child(3) { animation-delay: 0.4s; }
+.birthday-title span:nth-child(4) { animation-delay: 0.6s; }
+.birthday-title span:nth-child(5) { animation-delay: 0.8s; }
+.birthday-title span:nth-child(6) { animation-delay: 1s; }
+.birthday-title span:nth-child(7) { animation-delay: 1.2s; }
+.birthday-title span:nth-child(8) { animation-delay: 1.4s; }
+.birthday-title span:nth-child(9) { animation-delay: 1.6s; }
+.birthday-title span:nth-child(10) { animation-delay: 1.8s; }
+.birthday-title span:nth-child(11) { animation-delay: 2s; }
+.birthday-title span:nth-child(12) { animation-delay: 2.2s; }
+.birthday-title span:nth-child(13) { animation-delay: 2.4s; }
+.birthday-title span:nth-child(14) { animation-delay: 2.6s; }
+.birthday-title span:nth-child(15) { animation-delay: 2.8s; }
+.birthday-title span:nth-child(16) { animation-delay: 3s; }
+.birthday-title span:nth-child(17) { animation-delay: 3.2s; }
+.birthday-title span:nth-child(18) { animation-delay: 3.4s; }
+.birthday-title span:nth-child(19) { animation-delay: 3.6s; }
+.birthday-title span:nth-child(20) { animation-delay: 3.8s; }
+.birthday-title span:nth-child(21) { animation-delay: 4s; }
+.birthday-title span:nth-child(22) { animation-delay: 4.2s; }
+.birthday-title span:nth-child(23) { animation-delay: 4.4s; }
+.birthday-title span:nth-child(24) { animation-delay: 4.6s; }
+.birthday-title span:nth-child(25) { animation-delay: 4.8s; }
+.birthday-title span:nth-child(26) { animation-delay: 5s; }
+.birthday-title span:nth-child(27) { animation-delay: 5.2s; }
+.birthday-title span:nth-child(28) { animation-delay: 5.4s; }
+.birthday-title span:nth-child(29) { animation-delay: 5.6s; }
+.birthday-title span:nth-child(30) { animation-delay: 5.8s; }
+.birthday-title span:nth-child(31) { animation-delay: 6s; }
+.birthday-title span:nth-child(32) { animation-delay: 6.2s; }
+.birthday-title span:nth-child(33) { animation-delay: 6.4s; }
+.birthday-title span:nth-child(34) { animation-delay: 6.6s; }
+.birthday-title span:nth-child(35) { animation-delay: 6.8s; }
+.birthday-title span:nth-child(36) { animation-delay: 7s; }
+.birthday-title span:nth-child(37) { animation-delay: 7.2s; }
+.birthday-title span:nth-child(38) { animation-delay: 7.4s; }
+.birthday-title span:nth-child(39) { animation-delay: 7.6s; }
+.birthday-title span:nth-child(40) { animation-delay: 7.8s; }
+.birthday-title span:nth-child(41) { animation-delay: 8s; }
+.birthday-title span:nth-child(42) { animation-delay: 8.2s; }
+.birthday-title span:nth-child(43) { animation-delay: 8.4s; }
+.birthday-title span:nth-child(44) { animation-delay: 8.6s; }
+.birthday-title span:nth-child(45) { animation-delay: 8.8s; }
+.birthday-title span:nth-child(46) { animation-delay: 9s; }
+.birthday-title span:nth-child(47) { animation-delay: 9.2s; }
+.birthday-title span:nth-child(48) { animation-delay: 9.4s; }
+.birthday-title span:nth-child(49) { animation-delay: 9.6s; }
+.birthday-title span:nth-child(50) { animation-delay: 9.8s; }
 
 /* Birthday Message - Mobile First */
 .birthday-message {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #4b5563;
   margin-bottom: 2rem;
   max-width: 100%;
@@ -293,10 +156,15 @@ body {
   cursor: pointer;
   position: relative;
   transition: transform 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .birthday-message:hover {
   transform: scale(1.02);
+}
+
+.birthday-message:active {
+  transform: scale(0.98);
 }
 
 /* Click Wave Effect */
@@ -326,24 +194,210 @@ body {
   }
 }
 
-/* Music Controls */
+/* Interactive Birthday Cards Section - Mobile First */
+.cards-section {
+  margin-top: 3rem;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.cards-title {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  width: 100%;
+}
+
+.card-nav-btn {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  z-index: 3;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.card-nav-btn:hover {
+  background: var(--secondary-color);
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+
+.card-nav-btn:active {
+  transform: scale(0.95);
+}
+
+.card-container {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.birthday-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 1.25rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  transform-style: preserve-3d;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  transform: translateX(100px) rotateY(-15deg);
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.birthday-card.active {
+  opacity: 1;
+  transform: translateX(0) rotateY(0);
+  z-index: 2;
+}
+
+.birthday-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.birthday-card:active {
+  transform: translateY(-2px) scale(1.01);
+}
+
+.card-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.card-icon {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  animation: bounce 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+.card-message {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+  font-style: italic;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  padding: 0 0.25rem;
+}
+
+.card-author {
+  font-size: 0.85rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-number {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.card-dots {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #d1d5db;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.dot:hover {
+  background: var(--secondary-color);
+  transform: scale(1.2);
+}
+
+.dot.active {
+  background: var(--primary-color);
+  transform: scale(1.3);
+}
+
+.cards-hint {
+  font-size: 0.85rem;
+  color: #6b7280;
+  font-style: italic;
+  margin-top: 1rem;
+  padding: 0 0.5rem;
+}
+
+/* Music Controls - Mobile Optimized */
 .music-controls {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 15px;
+  right: 15px;
   z-index: 10;
   display: flex;
   align-items: center;
-  flex-direction: row-reverse; /* Reverse order so wave line appears first (left) */
+  flex-direction: row-reverse;
 }
 
 .music-btn {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   border: 2px solid var(--primary-color);
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 20px;
+  width: 45px;
+  height: 45px;
+  font-size: 18px;
   cursor: pointer;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
@@ -351,6 +405,8 @@ body {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .music-btn:hover {
@@ -359,24 +415,28 @@ body {
   color: white;
 }
 
+.music-btn:active {
+  transform: scale(0.95);
+}
+
 .music-btn.playing {
   background: var(--primary-color);
   color: white;
   animation: pulse 2s infinite;
 }
 
-/* Music Wave Line */
+/* Music Wave Line - Mobile Optimized */
 .music-wave-line {
   display: flex;
   align-items: center;
-  gap: 2px;
-  margin-left: 15px; /* Changed from margin-right to margin-left */
+  gap: 1.5px;
+  margin-left: 12px;
   animation: slideIn 0.5s ease-out;
 }
 
 .wave-segment {
-  width: 3px;
-  height: 20px;
+  width: 2.5px;
+  height: 16px;
   background: var(--primary-color);
   border-radius: 2px;
   animation: wave 1.2s ease-in-out infinite;
@@ -421,7 +481,7 @@ body {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-8px);
+    transform: translateY(-6px);
   }
 }
 
@@ -447,17 +507,133 @@ body {
 
 @keyframes wave {
   0%, 50%, 100% {
-    height: 20px;
+    height: 16px;
   }
   25% {
-    height: 40px;
+    height: 32px;
   }
   75% {
-    height: 10px;
+    height: 8px;
   }
 }
 
-/* Tablet Styles */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(-4px);
+  }
+}
+
+/* Small Mobile Styles (320px and up) */
+@media (min-width: 320px) {
+  .birthday-title {
+    font-size: 2rem;
+  }
+  
+  .cards-title {
+    font-size: 2rem;
+  }
+  
+  .card-container {
+    max-width: 280px;
+    height: 280px;
+  }
+  
+  .birthday-card {
+    padding: 1rem;
+  }
+  
+  .card-message {
+    font-size: 0.85rem;
+    line-height: 1.3;
+  }
+  
+  .card-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  .card-nav-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+}
+
+/* Medium Mobile Styles (375px and up) */
+@media (min-width: 375px) {
+  .birthday-title {
+    font-size: 2.2rem;
+  }
+  
+  .card-container {
+    max-width: 300px;
+    height: 290px;
+  }
+  
+  .birthday-card {
+    padding: 1.25rem;
+  }
+  
+  .card-message {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  
+  .card-icon {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-nav-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 17px;
+  }
+}
+
+/* Large Mobile Styles (425px and up) */
+@media (min-width: 425px) {
+  .birthday-title {
+    font-size: 2.4rem;
+  }
+  
+  .cards-title {
+    font-size: 2.2rem;
+  }
+  
+  .card-container {
+    max-width: 350px;
+    height: 300px;
+  }
+  
+  .birthday-card {
+    padding: 1.5rem;
+  }
+  
+  .card-message {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  
+  .card-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .card-nav-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+}
+
+/* Tablet Styles (768px and up) */
 @media (min-width: 768px) {
   .app {
     padding: 2rem;
@@ -466,6 +642,7 @@ body {
   .birthday-container {
     padding: 3rem 2.5rem;
     max-width: 600px;
+    margin-top: 2rem;
   }
   
   .birthday-title {
@@ -479,9 +656,48 @@ body {
     margin-bottom: 2.5rem;
     max-width: 500px;
   }
+
+  .cards-section {
+    margin-top: 5rem;
+    padding: 3rem 2rem;
+  }
+
+  .cards-title {
+    font-size: 2.5rem;
+  }
+
+  .card-container {
+    max-width: 600px;
+    height: 350px;
+  }
+
+  .birthday-card {
+    padding: 2.5rem;
+  }
+
+  .card-message {
+    font-size: 1.2rem;
+  }
+  
+  .card-nav-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+  
+  .music-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .card-icon {
+    font-size: 2.2rem;
+    margin-bottom: 0.75rem;
+  }
 }
 
-/* Desktop Styles */
+/* Desktop Styles (1024px and up) */
 @media (min-width: 1024px) {
   .birthday-container {
     padding: 4rem 3rem;
@@ -498,7 +714,7 @@ body {
   }
 }
 
-/* Large Desktop Styles */
+/* Large Desktop Styles (1440px and up) */
 @media (min-width: 1440px) {
   .birthday-container {
     padding: 5rem 4rem;
@@ -511,5 +727,49 @@ body {
   
   .birthday-message {
     font-size: 1.375rem;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .birthday-message:hover {
+    transform: none;
+  }
+  
+  .birthday-card:hover {
+    transform: none;
+  }
+  
+  .card-nav-btn:hover {
+    transform: none;
+  }
+  
+  .music-btn:hover {
+    transform: none;
+  }
+  
+  .dot:hover {
+    transform: none;
+  }
+}
+
+/* Landscape Mobile Optimization */
+@media (max-height: 500px) and (orientation: landscape) {
+  .birthday-container {
+    margin-top: 0.5rem;
+    padding: 1rem;
+  }
+  
+  .cards-section {
+    margin-top: 2rem;
+    padding: 1rem;
+  }
+  
+  .card-container {
+    height: 200px;
+  }
+  
+  .birthday-card {
+    padding: 1rem;
   }
 }
